@@ -7,3 +7,4 @@
     shell: "{{ item.shell }}"
     comment: "{{item.comment }}"
   loop: "{{ user_list }}"
+  
