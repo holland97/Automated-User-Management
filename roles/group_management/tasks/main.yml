@@ -1,0 +1,6 @@
+- name: Create groups with correct GID
+  group:
+    name: "{{ item.name }}"
+    gid: "{{ item.gid }}"
+  loop: "{{ group_list }}"
+

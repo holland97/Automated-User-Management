@@ -1,0 +1,72 @@
+user_list:
+  - name: edward 
+    uid: 5000
+    group: edward
+    groups: ["sysadmins", "backups", "company-shared"]
+    shell: /bin/bash
+    comment: Edward Kenway
+    state: present
+
+  - name: vladimir
+    uid: 5001
+    group: vladimir
+    groups: ["backups", "company-shared"]
+    shell: /bin/bash
+    comment: Vladimir Makarov
+    state: present
+
+  - name: brooks
+    uid: 5002
+    group: brooks
+    groups: ["developers", "company-shared", "dev-shared"]
+    shell: /bin/bash
+    comment: Eric Cross Brooks
+    state: present
+
+  - name: cassie
+    uid: 5003
+    group: cassie
+    groups: ["finance", "company-shared", "backups"]
+    shell: /bin/bash
+    comment: Cassie Prime
+    state: present
+
+  - name: zod
+    uid: 5004
+    group: zod
+    groups: ["sysadmins", "backups"]
+    shell: /bin/bash
+    comment: General Zod
+    state: present
+
+  - name: wilson
+    uid: 5005
+    group: wilson
+    groups: ["human-resource", "backups", "company-shared"]
+    shell: /bin/bash
+    comment: Slade Wilson
+    state: present
+
+  - name: banner
+    uid: 5006
+    group: banner
+    groups: ["developers", "dev-shared", "company-shared"]
+    shell: /bin/bash
+    comment: Bruce Banner
+    state: absent
+
+  - name: masters 
+    uid: 5007
+    group: masters 
+    groups: ["developers", "dev-shared", "company-shared"]
+    shell: /bin/bash
+    comment: Anthony Tony Masters
+    state: absent
+
+  - name: unknown
+    uid: 5008
+    groups: ["company-shared", "human-resource"]
+    shell: /bin/bash
+    comment: pending information
+    state: absent
+  

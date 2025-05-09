@@ -1,0 +1,22 @@
+package_list:
+  - name: curl
+    state: latest
+
+  - name: tree
+    state: latest
+
+  - name: htop
+    state: latest
+
+  - name: lsof
+    state: latest
+
+  - name: git
+    state: latest
+
+  - name: ansible
+    state: latest
+
+  - name: mstr
+    state: latest
+
