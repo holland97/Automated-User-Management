@@ -1,0 +1,4 @@
+- name: Install and update necessary packages
+  package:
+   name: "{{ item.name }}"
+  loop: "{{package_list }}"

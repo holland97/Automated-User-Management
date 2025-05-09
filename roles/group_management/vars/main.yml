@@ -1,0 +1,30 @@
+group_list:
+  - name: backups
+    gid: 1001
+    state: present
+
+  - name: developers
+    gid: 1002
+    mode: 0070
+    state: present
+
+  - name: dev-shared
+    gid: 1003
+    state: present
+
+  - name: finance
+    gid: 1004
+    state: present
+
+  - name: sysadmins
+    gid: 1005
+    state: present
+
+  - name: company-shared
+    gid: 1006
+    state: present
+
+  - name: human-resource
+    gid: 1007
+    state: present
+

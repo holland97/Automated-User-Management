@@ -1,0 +1,9 @@
+- name: Automate user creation with correct group(s), id, and state
+  user: 
+    name: "{{ item.name }}"
+    uid: "{{ item.uid }}"
+    group: "{{ item.group | default (omit) }}" # Special keyword that doesn't pass the parameter if it doesn't exist
+    groups: "{{ item.groups }}"
+    shell: "{{ item.shell }}"
+    comment: "{{item.comment }}"
+  loop: "{{ user_list }}"
