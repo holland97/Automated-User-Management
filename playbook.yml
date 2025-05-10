@@ -4,6 +4,7 @@
   roles:
     - group_management
     - user_management
+    - setup_ssh
     - package_management
 
   vars_files:

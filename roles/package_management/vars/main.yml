@@ -17,6 +17,5 @@ package_list:
   - name: ansible
     state: latest
 
-  - name: mstr
+  - name: vim
     state: latest
-

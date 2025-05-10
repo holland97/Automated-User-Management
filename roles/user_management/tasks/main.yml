@@ -1,4 +1,10 @@
-- name: Automate user creation with correct group(s), id, and state
+- name: Ensure users primary group are created
+  group:
+    name: "{{ item.name }}"
+    gid: "{{ item.gid }}"
+  loop: "{{ users_primary_group }}"
+
+- name: Automate user creation with correct secondary groups, UID, and state
   user: 
     name: "{{ item.name }}"
     uid: "{{ item.uid }}"
@@ -6,5 +12,4 @@
     groups: "{{ item.groups }}"
     shell: "{{ item.shell }}"
     comment: "{{item.comment }}"
-  loop: "{{ user_list }}"
-  
+  loop: "{{ user_info }}"

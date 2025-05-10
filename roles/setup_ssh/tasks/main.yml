@@ -1,0 +1,26 @@
+- name: Create directory ~/.ssh for users if it doesn't exist
+  file:
+    path: "/home/{{ item.name }}/.ssh"
+    state: directory
+    mode: '0700'
+  loop: "{{ ssh_users }}"
+
+- name: Generate private keys for users and store in ~/.ssh directory
+  openssl_privatekey:
+    path: "/home/{{ item.name }}/.ssh/my-ssh-keys"
+    owner: "{{item.name }}"
+    group: "{{ item.name }}"
+    mode: '0600'
+    state: present
+  loop: "{{ ssh_users }}"
+
+- name: Generate public keys for users and store in ~/.ssh directory
+  openssl_publickey:
+    path: "/home/{{ item.name }}/.ssh/my-ssh-keys.pub"
+    privatekey_path: "/home/{{ item.name }}/.ssh/my-ssh-keys"
+    owner: "{{ item.name }}"
+    group: "{{ item.name }}"
+    mode: '0600'
+    state: present 
+  loop: "{{ ssh_users }}"
+

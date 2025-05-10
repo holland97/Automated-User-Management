@@ -1,0 +1,21 @@
+ssh_users:
+  - name: edward
+
+  - name: vladimir
+
+  - name: brooks
+
+  - name: cassie
+
+  - name: zod
+
+  - name: wilson
+
+  - name: banner
+    state: absent
+
+  - name: masters
+    state: absent
+
+  - name: unknown
+    state: absent

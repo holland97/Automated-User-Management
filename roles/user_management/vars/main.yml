@@ -1,4 +1,41 @@
-user_list:
+users_primary_group:
+  - name: edward
+    gid: 9000
+    state: present
+
+  - name: vladimir
+    gid: 9001
+    state: present
+
+  - name: brooks
+    gid: 9002
+    state: present
+
+  - name: cassie
+    gid: 9003
+    state: present
+
+  - name: zod
+    gid: 9004
+    state: present
+
+  - name: wilson
+    gid: 9005
+    state: present
+
+  - name: banner
+    gid: 9006
+    state: absent
+
+  - name: masters
+    gid: 9007
+    state: absent
+
+  - name: unknown
+    gid: 9008
+    state: absent
+
+user_info:
   - name: edward 
     uid: 5000
     group: edward
@@ -69,4 +106,3 @@ user_list:
     shell: /bin/bash
     comment: pending information
     state: absent
-  
