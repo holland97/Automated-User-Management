@@ -1,6 +1,5 @@
-- name: Create groups with correct GID
+- name: Ensure groups are created
   group:
     name: "{{ item.name }}"
     gid: "{{ item.gid }}"
   loop: "{{ group_list }}"
-
